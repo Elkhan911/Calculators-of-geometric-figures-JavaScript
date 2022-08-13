@@ -1,3 +1,7 @@
+.mainHeading {
+  text-align: center;
+}
+
 .task {
   margin: 30px auto;
   border: 1px solid black;
@@ -37,4 +41,28 @@
 .button {
   width: 100px;
   height: 36px;
+}
+
+.calcul__buttons {
+  width: 40px;
+  height: 40px;
+  border: 1px solid blue;
+  font-size: 16px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.calcul__buttons-extra {
+  width: 180px;
+  border: 1px solid blue;
+  font-size: 16px;
+  margin: 20px 0 20px 0;
+  font-weight: bold;
+}
+
+.calcul__values {
+  width: 300px;
+  margin: 100px;
+  height: 30px;
+  font-size: 15px;
 }
