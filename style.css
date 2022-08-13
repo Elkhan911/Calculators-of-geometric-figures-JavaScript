@@ -1,0 +1,40 @@
+.task {
+  margin: 30px auto;
+  border: 1px solid black;
+  width: 1200px;
+}
+
+.task__space {
+  margin: 0 0 50px 0;
+}
+
+.task__description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task__hints {
+  text-align: center;
+  margin: 5px 0 5px;
+}
+
+.task__input {
+  height: 30px;
+  margin: 100px 100px 100px 0;
+}
+
+.task__keys {
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.task__answer {
+  display: inline;
+  margin-right: 100px;
+}
+
+.button {
+  width: 100px;
+  height: 36px;
+}
