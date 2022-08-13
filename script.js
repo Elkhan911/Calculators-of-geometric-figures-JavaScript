@@ -123,8 +123,6 @@ for (let button of buttons) {
 function deleteSymbFunc() {
   let str = String(calculValues1.value);
   let arr = str.split("");
-  console.log(arr);
-
   arr.pop();
   let newValue = arr.join("");
 
@@ -133,7 +131,9 @@ function deleteSymbFunc() {
 
 deleteSymbolBtn.addEventListener("click", deleteSymbFunc);
 
-
-function ClearSymbFunc(){
-    
+function ClearSymbFunc() {
+  calculValues1.value = "";
+  calculValues2.value = "";
 }
+
+clearSymbolsBtn.addEventListener("click", ClearSymbFunc);
