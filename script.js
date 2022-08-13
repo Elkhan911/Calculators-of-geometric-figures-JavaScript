@@ -66,3 +66,19 @@ input3.addEventListener("blur", function () {
   taskAnswer32.textContent =
     "Длина окружности: " + (Number(input3.value) * Math.PI).toFixed(2);
 });
+
+buttton2.addEventListener("click", function () {
+  let perimetr =
+    Number(input4A.value) + Number(input4B.value) + Number(input4C.value);
+
+  let halfPerimetr = perimetr / 2;
+
+  taskAnswer4.textContent =
+    "Плоащь треугольника " +
+    Math.sqrt(
+      halfPerimetr *
+        (halfPerimetr - Number(input4A.value)) *
+        (halfPerimetr - Number(input4B.value)) *
+        (halfPerimetr - Number(input4C.value))
+    );
+});
