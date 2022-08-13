@@ -40,7 +40,6 @@ input1.addEventListener("blur", function () {
   }
 });
 
-
 buttton1.addEventListener("click", areaAndPerimeterRectangle);
 
 function areaAndPerimeterRectangle() {
@@ -59,3 +58,11 @@ function areaAndPerimeterRectangle() {
       "Площадь квадрата: " + inputLength.value * inputWidth.value;
   }
 }
+
+input3.addEventListener("blur", function () {
+  taskAnswer31.textContent =
+    "Площадь круга:  " + ((Number(input3.value) ** 2 / 4) * Math.PI).toFixed(2);
+
+  taskAnswer32.textContent =
+    "Длина окружности: " + (Number(input3.value) * Math.PI).toFixed(2);
+});
