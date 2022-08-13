@@ -39,3 +39,23 @@ input1.addEventListener("blur", function () {
       "Площадь квадрата:" + "  " + Number(input1.value) ** 2;
   }
 });
+
+
+buttton1.addEventListener("click", areaAndPerimeterRectangle);
+
+function areaAndPerimeterRectangle() {
+  if (isNaN(inputLength.value) || isNaN(inputWidth.value)) {
+    alert("Нужно ввести число");
+    input1.value = "";
+  }
+  if (
+    typeof Number(inputLength.value) == "number" &&
+    typeof Number(inputWidth.value) == "number"
+  ) {
+    taskAnswer21.textContent =
+      "Периметр квадрата: " +
+      (Number(inputLength.value) + Number(inputWidth.value)) * 2;
+    taskAnswer22.textContent =
+      "Площадь квадрата: " + inputLength.value * inputWidth.value;
+  }
+}
