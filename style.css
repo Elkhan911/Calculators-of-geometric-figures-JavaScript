@@ -66,3 +66,9 @@
   height: 30px;
   font-size: 15px;
 }
+
+.calcul__result {
+  margin: 100px;
+  font-size: large;
+  font-weight: bold;
+}

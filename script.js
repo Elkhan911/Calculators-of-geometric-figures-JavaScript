@@ -44,6 +44,7 @@ let calculValues1 = document.querySelector("#calculValues1");
 let calculValues2 = document.querySelector("#calculValues2");
 
 let buttons = document.querySelectorAll(".calcul__buttons");
+let calcuResult = document.querySelector("#calcuResult");
 
 //************************************************************************************************************** */
 //******************************************** */ FUNCTIONS
@@ -114,10 +115,27 @@ let buttons = document.querySelectorAll(".calcul__buttons");
 
 // // Main Calculator
 
-for (let button of buttons) {
-  button.addEventListener("click", function () {
-    calculValues1.value += this.textContent;
-  });
+calculValues1.addEventListener("blur", func1);
+calculValues2.addEventListener("blur", func2);
+
+function func1() {
+  //   calculValues2.removeEventListener("blur", func2);
+
+  for (let button of buttons) {
+    button.addEventListener("click", function () {
+      calculValues1.value += this.textContent;
+    });
+  }
+}
+
+function func2() {
+  //   calculValues1.removeEventListener("blur", func1);
+
+  for (let button of buttons) {
+    button.addEventListener("click", function () {
+      calculValues2.value += this.textContent;
+    });
+  }
 }
 
 function deleteSymbFunc() {
