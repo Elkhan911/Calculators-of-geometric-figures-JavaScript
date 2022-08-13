@@ -25,3 +25,17 @@ let buttton2 = document.querySelector("#button2");
 //************************************************************************************************************** */
 //******************************************** */ FUNCTIONS
 //************************************************************************************************************** */
+
+input1.addEventListener("blur", function () {
+  if (isNaN(input1.value)) {
+    alert("Нужно ввести число");
+    input1.value = "";
+  }
+  if (typeof Number(input1.value) == "number") {
+    taskAnswer11.textContent =
+      "Периметр квадрата:" + "  " + Number(input1.value) * 4;
+
+    taskAnswer12.textContent =
+      "Площадь квадрата:" + "  " + Number(input1.value) ** 2;
+  }
+});
