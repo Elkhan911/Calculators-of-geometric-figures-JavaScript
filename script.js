@@ -116,6 +116,19 @@ for (let button of buttons) {
   });
 }
 
+// функция очистки поля ввода
+clearSymbols.addEventListener("click", function () {
+  calculValue.value = "";
+});
+
+// функция удаления последнего символа
+deleteSymbol.addEventListener("click", function () {
+  let arr = calculValue.value.split("");
+  arr.pop();
+  let newValue = arr.join("");
+  calculValue.value = newValue;
+});
+
 // ввод данных для первой перменной
 enterBtn1.addEventListener("click", function () {
   calculVariable1.textContent += calculValue.value;
@@ -127,3 +140,11 @@ enterBtn2.addEventListener("click", function () {
   calculVariable2.textContent += calculValue.value;
   calculValue.value = "";
 });
+
+function Plus(a, b) {
+  let result = a + b;
+}
+
+function Minus(a, b) {
+  let result = a - b;
+}
