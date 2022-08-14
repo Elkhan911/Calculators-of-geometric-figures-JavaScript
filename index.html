@@ -86,25 +86,25 @@
 
       <div class="task__keys">
         <div class="calcul">
-          <button class="calcul__buttons" id="button1">1</button>
-          <button class="calcul__buttons" id="button2">2</button>
-          <button class="calcul__buttons" id="button3">3</button>
+          <button class="calcul__btn-stl calcul__btns" id="button1">1</button>
+          <button class="calcul__btn-stl calcul__btns" id="button2">2</button>
+          <button class="calcul__btn-stl calcul__btns" id="button3">3</button>
           <div>
-            <button class="calcul__buttons" id="button4">4</button>
-            <button class="calcul__buttons" id="button5">5</button>
-            <button class="calcul__buttons" id="button6">6</button>
+            <button class="calcul__btn-stl calcul__btns" id="button4">4</button>
+            <button class="calcul__btn-stl calcul__btns" id="button5">5</button>
+            <button class="calcul__btn-stl calcul__btns" id="button6">6</button>
           </div>
-          <button class="calcul__buttons" id="button7">7</button>
-          <button class="calcul__buttons" id="button8">8</button>
-          <button class="calcul__buttons" id="button9">9</button>
+          <button class="calcul__btn-stl calcul__btns" id="button7">7</button>
+          <button class="calcul__btn-stl calcul__btns" id="button8">8</button>
+          <button class="calcul__btn-stl calcul__btns" id="button9">9</button>
 
-          <button class="calcul__buttons" id="button10">0</button>
+          <button class="calcul__btn-stl calcul__btns" id="button10">0</button>
         </div>
         <div>
-          <button class="calcul__buttons" id="buttonPlus">+</button>
-          <button class="calcul__buttons" id="buttonMinus">-</button>
-          <button class="calcul__buttons" id="buttonMultiply">*</button>
-          <button class="calcul__buttons" id="buttonDivide">/</button>
+          <button class="calcul__btn-stl" id="butttus">+</button>
+          <button class="calcul__btn-stl" id="butttnus">-</button>
+          <button class="calcul__btn-stl" id="butttltiply">*</button>
+          <button class="calcul__btn-stl" id="butttvide">/</button>
         </div>
 
         <div>
@@ -114,14 +114,30 @@
           <button class="calcul__buttons-extra" id="clearSymbols">
             Очистить символы
           </button>
+
+          <div>
+            <button class="calcul__buttons-extra" id="enterBtn1">
+              Enter для первой переменной
+            </button>
+            <button class="calcul__buttons-extra" id="enterBtn2">
+              Enter для второй переменной
+            </button>
+          </div>
         </div>
 
         <div>
-          <input class="calcul__values" type="text" id="calculValues1" />
-          <input class="calcul__values" type="text" id="calculValues2" />
+          <input class="calcul__values" type="text" id="calculValue" />
         </div>
 
-        <p class="calcul__result" id="calcuResult">Правильный ответ:</p>
+        <div id="parentDiv">
+          <p class="calcul__result" id="calculVariable1">
+            Ваша первая переменная:
+          </p>
+          <p class="calcul__result" id="calculVariable2">
+            Ваша вторая переменная:
+          </p>
+          <p class="calcul__result" id="calculResult">Результат:</p>
+        </div>
       </div>
     </section>
 

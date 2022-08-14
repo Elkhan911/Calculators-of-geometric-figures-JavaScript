@@ -22,16 +22,6 @@
 // let taskAnswer4 = document.querySelector("#taskAnswer4");
 // let buttonSub2 = document.querySelector("#buttonSub2");
 
-let button1 = document.querySelector("#button1");
-let button2 = document.querySelector("#button2");
-let button3 = document.querySelector("#button3");
-let button4 = document.querySelector("#button4");
-let button5 = document.querySelector("#button5");
-let button6 = document.querySelector("#button6");
-let button7 = document.querySelector("#button7");
-let button8 = document.querySelector("#button8");
-let button9 = document.querySelector("#button9");
-let button0 = document.querySelector("#button0");
 let buttonPlus = document.querySelector("#buttonPlus");
 let buttonMinus = document.querySelector("#buttonMinus");
 let buttonMultiply = document.querySelector("#buttonMultiply");
@@ -39,12 +29,16 @@ let buttonDivide = document.querySelector("#buttonDivide");
 
 let deleteSymbolBtn = document.querySelector("#deleteSymbol");
 let clearSymbolsBtn = document.querySelector("#clearSymbols");
+let enterBtn1 = document.querySelector("#enterBtn1");
+let enterBtn2 = document.querySelector("#enterBtn2");
 
-let calculValues1 = document.querySelector("#calculValues1");
-let calculValues2 = document.querySelector("#calculValues2");
+let calculValue = document.querySelector("#calculValue");
 
-let buttons = document.querySelectorAll(".calcul__buttons");
-let calcuResult = document.querySelector("#calcuResult");
+let calculVariable1 = document.querySelector("#calculVariable1");
+let calculVariable2 = document.querySelector("#calculVariable2");
+let calcuResult = document.querySelector("#calculResult");
+
+let buttons = document.querySelectorAll(".calcul__btns");
 
 //************************************************************************************************************** */
 //******************************************** */ FUNCTIONS
@@ -113,4 +107,23 @@ let calcuResult = document.querySelector("#calcuResult");
 //     );
 // });
 
-// // Main Calculator
+//  Main Calculator
+
+// экранная клавиатура для кнопок
+for (let button of buttons) {
+  button.addEventListener("click", function () {
+    calculValue.value += button.textContent;
+  });
+}
+
+// ввод данных для первой перменной
+enterBtn1.addEventListener("click", function () {
+  calculVariable1.textContent += calculValue.value;
+  calculValue.value = "";
+});
+
+// ввод данных для второй переменной
+enterBtn2.addEventListener("click", function () {
+  calculVariable2.textContent += calculValue.value;
+  calculValue.value = "";
+});

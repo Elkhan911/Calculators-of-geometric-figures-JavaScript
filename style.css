@@ -43,7 +43,7 @@
   height: 36px;
 }
 
-.calcul__buttons {
+.calcul__btn-stl {
   width: 40px;
   height: 40px;
   border: 1px solid blue;
@@ -68,7 +68,7 @@
 }
 
 .calcul__result {
-  margin: 100px;
+  margin: 10px;
   font-size: large;
   font-weight: bold;
 }
