@@ -123,13 +123,15 @@ deleteSymbol.addEventListener("click", function () {
 
 // ввод данных для первой перменной
 enterBtn1.addEventListener("click", function () {
-  firstvariable.textContent += calculValue.value;
+  firstvariable.textContent = "";
+  firstvariable.textContent = calculValue.value;
   calculValue.value = "";
 });
 
 // ввод данных для второй переменной
 enterBtn2.addEventListener("click", function () {
-  secondVariable.textContent += calculValue.value;
+  secondVariable.textContent = "";
+  secondVariable.textContent = calculValue.value;
   calculValue.value = "";
 });
 
