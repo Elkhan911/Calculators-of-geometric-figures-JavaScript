@@ -174,3 +174,24 @@ buttonPlus.addEventListener("click", function () {
 
   calcuResult.textContent += " " + Plus(a, b);
 });
+
+buttonMinus.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  let b = secondVariable.textContent;
+
+  calculValue.value += Minus(a, b);
+});
+
+buttonMultiply.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  letb = secondVariable.textContent;
+
+  calculValue.value += Multiply(a, b);
+});
+
+buttonDivide.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  let b = secondVariable.textContent;
+
+  calculValue.value += Divide(a, b);
+});
