@@ -2,26 +2,22 @@
 //******************************************** */ VARIABLES
 //************************************************************************************************************** */
 
-// let input1 = document.querySelector("#input1");
-// let taskAnswer11 = document.querySelector("#taskAnswer1");
-// let taskAnswer12 = document.querySelector("#taskAnswer2");
-
-// let inputLength = document.querySelector("#inputLength");
-// let inputWidth = document.querySelector("#inputWidth");
-// let taskAnswer21 = document.querySelector("#taskAnswer21");
-// let taskAnswer22 = document.querySelector("#taskAnswer22");
-// let buttonSub1 = document.querySelector("#buttonSub1");
-
-// let input3 = document.querySelector("#input3");
-// let taskAnswer31 = document.querySelector("#taskAnswer31");
-// let taskAnswer32 = document.querySelector("#taskAnswer32");
-
-// let input4A = document.querySelector("#input4A");
-// let input4B = document.querySelector("#input4B");
-// let input4C = document.querySelector("#input4C");
-// let taskAnswer4 = document.querySelector("#taskAnswer4");
-// let buttonSub2 = document.querySelector("#buttonSub2");
-
+let input1 = document.querySelector("#input1");
+let taskAnswer11 = document.querySelector("#taskAnswer1");
+let taskAnswer12 = document.querySelector("#taskAnswer2");
+let inputLength = document.querySelector("#inputLength");
+let inputWidth = document.querySelector("#inputWidth");
+let taskAnswer21 = document.querySelector("#taskAnswer21");
+let taskAnswer22 = document.querySelector("#taskAnswer22");
+let buttonSub1 = document.querySelector("#buttonSub1");
+let input3 = document.querySelector("#input3");
+let taskAnswer31 = document.querySelector("#taskAnswer31");
+let taskAnswer32 = document.querySelector("#taskAnswer32");
+let input4A = document.querySelector("#input4A");
+let input4B = document.querySelector("#input4B");
+let input4C = document.querySelector("#input4C");
+let taskAnswer4 = document.querySelector("#taskAnswer4");
+let buttonSub2 = document.querySelector("#buttonSub2");
 let buttonPlus = document.querySelector("#buttonPlus");
 let buttonMinus = document.querySelector("#buttonMinus");
 let buttonMultiply = document.querySelector("#buttonMultiply");
@@ -48,71 +44,63 @@ let buttons = document.querySelectorAll(".calcul__btns");
 //******************************************** */ FUNCTIONS
 //************************************************************************************************************** */
 
-// // First Calculator
+// First Calculator
+input1.addEventListener("blur", function () {
+  if (isNaN(input1.value)) {
+    alert("Нужно ввести число");
+    input1.value = "";
+  }
+  if (typeof Number(input1.value) == "number") {
+    taskAnswer11.textContent =
+      "Периметр квадрата:" + "  " + Number(input1.value) * 4;
+    taskAnswer12.textContent =
+      "Площадь квадрата:" + "  " + Number(input1.value) ** 2;
+  }
+});
 
-// input1.addEventListener("blur", function () {
-//   if (isNaN(input1.value)) {
-//     alert("Нужно ввести число");
-//     input1.value = "";
-//   }
-//   if (typeof Number(input1.value) == "number") {
-//     taskAnswer11.textContent =
-//       "Периметр квадрата:" + "  " + Number(input1.value) * 4;
+// Second Calculator
+buttonSub1.addEventListener("click", areaAndPerimeterRectangle);
+function areaAndPerimeterRectangle() {
+  if (isNaN(inputLength.value) || isNaN(inputWidth.value)) {
+    alert("Нужно ввести число");
+    input1.value = "";
+  }
+  if (
+    typeof Number(inputLength.value) == "number" &&
+    typeof Number(inputWidth.value) == "number"
+  ) {
+    taskAnswer21.textContent =
+      "Периметр квадрата: " +
+      (Number(inputLength.value) + Number(inputWidth.value)) * 2;
+    taskAnswer22.textContent =
+      "Площадь квадрата: " + inputLength.value * inputWidth.value;
+  }
+}
 
-//     taskAnswer12.textContent =
-//       "Площадь квадрата:" + "  " + Number(input1.value) ** 2;
-//   }
-// });
+// Third Calculator
+input3.addEventListener("blur", function () {
+  taskAnswer31.textContent =
+    "Площадь круга:  " + ((Number(input3.value) ** 2 / 4) * Math.PI).toFixed(2);
+  taskAnswer32.textContent =
+    "Длина окружности: " + (Number(input3.value) * Math.PI).toFixed(2);
+});
 
-// // Second Calculator
+// Fourth Calculator
+buttonSub2.addEventListener("click", function () {
+  let perimetr =
+    Number(input4A.value) + Number(input4B.value) + Number(input4C.value);
+  let halfPerimetr = perimetr / 2;
+  taskAnswer4.textContent =
+    "Плоащь треугольника " +
+    Math.sqrt(
+      halfPerimetr *
+        (halfPerimetr - Number(input4A.value)) *
+        (halfPerimetr - Number(input4B.value)) *
+        (halfPerimetr - Number(input4C.value))
+    );
+});
 
-// buttonSub1.addEventListener("click", areaAndPerimeterRectangle);
-
-// function areaAndPerimeterRectangle() {
-//   if (isNaN(inputLength.value) || isNaN(inputWidth.value)) {
-//     alert("Нужно ввести число");
-//     input1.value = "";
-//   }
-//   if (
-//     typeof Number(inputLength.value) == "number" &&
-//     typeof Number(inputWidth.value) == "number"
-//   ) {
-//     taskAnswer21.textContent =
-//       "Периметр квадрата: " +
-//       (Number(inputLength.value) + Number(inputWidth.value)) * 2;
-//     taskAnswer22.textContent =
-//       "Площадь квадрата: " + inputLength.value * inputWidth.value;
-//   }
-// }
-
-// // Third Calculator
-// input3.addEventListener("blur", function () {
-//   taskAnswer31.textContent =
-//     "Площадь круга:  " + ((Number(input3.value) ** 2 / 4) * Math.PI).toFixed(2);
-
-//   taskAnswer32.textContent =
-//     "Длина окружности: " + (Number(input3.value) * Math.PI).toFixed(2);
-// });
-
-// // Fourth Calculator
-// buttonSub2.addEventListener("click", function () {
-//   let perimetr =
-//     Number(input4A.value) + Number(input4B.value) + Number(input4C.value);
-
-//   let halfPerimetr = perimetr / 2;
-
-//   taskAnswer4.textContent =
-//     "Плоащь треугольника " +
-//     Math.sqrt(
-//       halfPerimetr *
-//         (halfPerimetr - Number(input4A.value)) *
-//         (halfPerimetr - Number(input4B.value)) *
-//         (halfPerimetr - Number(input4C.value))
-//     );
-// });
-
-//  Main Calculator
-
+// Main Calculator
 // экранная клавиатура для кнопок
 for (let button of buttons) {
   button.addEventListener("click", function () {
@@ -157,7 +145,7 @@ function Multiply(a, b) {
   return Number(a) * Number(b);
 }
 
-function Divide() {
+function Divide(a, b) {
   return Number(a) / Number(b);
 }
 
@@ -165,6 +153,7 @@ function Divide() {
 NewOperationBtn.addEventListener("click", function () {
   firstvariable.textContent = "";
   secondVariable.textContent = "";
+  calcuResult.textContent = "Результат:";
   calculValue.value = "";
 });
 
@@ -179,19 +168,19 @@ buttonMinus.addEventListener("click", function () {
   let a = firstvariable.textContent;
   let b = secondVariable.textContent;
 
-  calculValue.value += Minus(a, b);
+  calcuResult.textContent += Minus(a, b);
 });
 
 buttonMultiply.addEventListener("click", function () {
   let a = firstvariable.textContent;
   letb = secondVariable.textContent;
 
-  calculValue.value += Multiply(a, b);
+  calcuResult.textContent += Multiply(a, b);
 });
 
 buttonDivide.addEventListener("click", function () {
   let a = firstvariable.textContent;
   let b = secondVariable.textContent;
 
-  calculValue.value += Divide(a, b);
+  calcuResult.textContent += Divide(a, b);
 });
