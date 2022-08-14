@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Calculators</title>
-</head>
+  </head>
 
-<body>
-    <h1 class="mainHeading"> Калькулторы </h1>
+  <body>
+    <h1 class="mainHeading">Калькулторы</h1>
     <!-- <section class="task">
         <h2 class="task__description"> Сделайте калькулятор, который будет находить площадь и периметр <u> квадрата</u>
         </h2>
@@ -81,49 +80,51 @@
     </section> -->
 
     <section class="task">
-        <h2 class="task__description"> Сделайте обычный калькулятор при помощи экранной клавиатуры</h2>
+      <h2 class="task__description">
+        Сделайте обычный калькулятор при помощи экранной клавиатуры
+      </h2>
 
-        <div class="task__keys">
+      <div class="task__keys">
+        <div class="calcul">
+          <button class="calcul__buttons" id="button1">1</button>
+          <button class="calcul__buttons" id="button2">2</button>
+          <button class="calcul__buttons" id="button3">3</button>
+          <div>
+            <button class="calcul__buttons" id="button4">4</button>
+            <button class="calcul__buttons" id="button5">5</button>
+            <button class="calcul__buttons" id="button6">6</button>
+          </div>
+          <button class="calcul__buttons" id="button7">7</button>
+          <button class="calcul__buttons" id="button8">8</button>
+          <button class="calcul__buttons" id="button9">9</button>
 
-            <div class="calcul">
-                <button class="calcul__buttons" id="button1">1</button>
-                <button class="calcul__buttons" id="button2">2</button>
-                <button class="calcul__buttons" id="button3">3</button>
-                <div>
-                    <button class="calcul__buttons" id="button4">4</button>
-                    <button class="calcul__buttons" id="button5">5</button>
-                    <button class="calcul__buttons" id="button6">6</button>
-                </div>
-                <button class="calcul__buttons" id="button7">7</button>
-                <button class="calcul__buttons" id="button8">8</button>
-                <button class="calcul__buttons" id="button9">9</button>
-
-                <button class="calcul__buttons" id="button10">0</button>
-            </div>
-            <div>
-                <button class="calcul__buttons" id="buttonPlus">+</button>
-                <button class="calcul__buttons" id="buttonMinus">-</button>
-                <button class="calcul__buttons" id="buttonMultiply">*</button>
-                <button class="calcul__buttons" id="buttonDivide">/</button>
-            </div>
-
-            <div>
-                <button class="calcul__buttons-extra" id="deleteSymbol">Удалить символ</button>
-                <button class="calcul__buttons-extra" id="clearSymbols">Очистить символы</button>
-            </div>
-
-            <div>
-                <input class="calcul__values" type="text" id="calculValues1">
-                <input class="calcul__values" type="text" id="calculValues2">
-            </div>
-
-            <p class="calcul__result" id="calcuResult">Правильный ответ: </p>
+          <button class="calcul__buttons" id="button10">0</button>
         </div>
+        <div>
+          <button class="calcul__buttons" id="buttonPlus">+</button>
+          <button class="calcul__buttons" id="buttonMinus">-</button>
+          <button class="calcul__buttons" id="buttonMultiply">*</button>
+          <button class="calcul__buttons" id="buttonDivide">/</button>
+        </div>
+
+        <div>
+          <button class="calcul__buttons-extra" id="deleteSymbol">
+            Удалить символ
+          </button>
+          <button class="calcul__buttons-extra" id="clearSymbols">
+            Очистить символы
+          </button>
+        </div>
+
+        <div>
+          <input class="calcul__values" type="text" id="calculValues1" />
+          <input class="calcul__values" type="text" id="calculValues2" />
+        </div>
+
+        <p class="calcul__result" id="calcuResult">Правильный ответ:</p>
+      </div>
     </section>
 
-
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
