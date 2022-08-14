@@ -101,10 +101,10 @@
           <button class="calcul__btn-stl calcul__btns" id="button10">0</button>
         </div>
         <div>
-          <button class="calcul__btn-stl" id="butttus">+</button>
-          <button class="calcul__btn-stl" id="butttnus">-</button>
-          <button class="calcul__btn-stl" id="butttltiply">*</button>
-          <button class="calcul__btn-stl" id="butttvide">/</button>
+          <button class="calcul__btn-stl" id="buttonPlus">+</button>
+          <button class="calcul__btn-stl" id="butttMinus">-</button>
+          <button class="calcul__btn-stl" id="butttlMutiply">*</button>
+          <button class="calcul__btn-stl" id="butttDivide">/</button>
         </div>
 
         <div>
@@ -132,14 +132,17 @@
             id="calculValue"
             value="10"
           />
+          <button class="calcul__buttons-extra" id="NewOperationBtn">
+            Начать заново
+          </button>
         </div>
 
         <div id="parentDiv">
           <p class="calcul__result" id="calculVariable1">
-            Ваша первая переменная:
+            Ваша первая переменная: <span id="firstvariable"></span>
           </p>
           <p class="calcul__result" id="calculVariable2">
-            Ваша вторая переменная:
+            Ваша вторая переменная: <span id="secondVariable"></span>
           </p>
           <p class="calcul__result" id="calculResult">Результат:</p>
         </div>

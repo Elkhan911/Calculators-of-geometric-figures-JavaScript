@@ -37,6 +37,10 @@ let calculValue = document.querySelector("#calculValue");
 let calculVariable1 = document.querySelector("#calculVariable1");
 let calculVariable2 = document.querySelector("#calculVariable2");
 let calcuResult = document.querySelector("#calculResult");
+let NewOperationBtn = document.querySelector("#NewOperationBtn");
+
+let firstvariable = document.querySelector("#firstvariable");
+let secondVariable = document.querySelector("#secondVariable");
 
 let buttons = document.querySelectorAll(".calcul__btns");
 
@@ -131,20 +135,42 @@ deleteSymbol.addEventListener("click", function () {
 
 // ввод данных для первой перменной
 enterBtn1.addEventListener("click", function () {
-  calculVariable1.textContent += calculValue.value;
+  firstvariable.textContent += calculValue.value;
   calculValue.value = "";
 });
 
 // ввод данных для второй переменной
 enterBtn2.addEventListener("click", function () {
-  calculVariable2.textContent += calculValue.value;
+  secondVariable.textContent += calculValue.value;
   calculValue.value = "";
 });
 
 function Plus(a, b) {
-  let result = a + b;
+  return Number(a) + Number(b);
 }
 
 function Minus(a, b) {
-  let result = a - b;
+  return Number(a) - Number(b);
 }
+
+function Multiply(a, b) {
+  return Number(a) * Number(b);
+}
+
+function Divide() {
+  return Number(a) / Number(b);
+}
+
+// начать заново, сбросить все введенные данные
+NewOperationBtn.addEventListener("click", function () {
+  firstvariable.textContent = "";
+  secondVariable.textContent = "";
+  calculValue.value = "";
+});
+
+buttonPlus.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  let b = secondVariable.textContent;
+
+  calcuResult.textContent += " " + Plus(a, b);
+});
