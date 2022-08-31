@@ -5,145 +5,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Calculators</title>
+    <title>Калькулторы геометрических фигур</title>
   </head>
 
-  <body>
-    <h1 class="mainHeading">Калькулторы</h1>
-    <section class="task">
-      <h2 class="task__description">
-        Сделайте калькулятор, который будет находить площадь и периметр
+  <body class="page">
+    <h1 class="page__header">Калькулторы геометрических фигур</h1>
+
+    <section class="calculator">
+      <h2 class="calculator__description">
+        Калькулятор для подсчета площади и периметр
         <u> квадрата</u>
       </h2>
-      <h3 class="task__hints">
+      <h3 class="calculator__hints">
         Формула периметра квадрата: P = 4 × a, где Р — периметр, а — сторона
       </h3>
-      <h3 class="task__hints">
+      <h3 class="calculator__hints">
         Формула площади квадрата: S = a × a, где S — площадь, a — сторона
       </h3>
 
-      <div class="task__keys">
+      <div class="calculator__keys">
         <input
-          class="task__input"
+          class="calculator__value"
           type="text"
           name=""
           id="input1"
           placeholder="введите значение..."
         />
-        <p class="task__answer" id="taskAnswer1">Периметр квадрата:</p>
-        <p class="task__answer" id="taskAnswer2">Площадь квадрата:</p>
+        <p class="calculator__answer" id="taskAnswer1">Периметр квадрата:</p>
+        <p class="calculator__answer" id="taskAnswer2">Площадь квадрата:</p>
       </div>
     </section>
 
-    <section class="task">
-      <h2 class="task__description">
+    <section class="calculator">
+      <h2 class="calculator__description">
         Сделайте калькулятор, который будет находить площадь и периметр
         <u> прямоугольника </u>
       </h2>
-      <h3 class="task__hints">
+      <h3 class="calculator__hints">
         Формула периметра прямоугольника: P = 2(a+b), где Р — периметр, а —
         сторона, b — сторона
       </h3>
-      <h3 class="task__hints">
+      <h3 class="calculator__hints">
         Формула площади прямоугольника: S = a × b, где S — площадь, a — сторона,
         b — сторона
       </h3>
 
-      <div class="task__keys">
+      <div class="calculator__keys">
         <input
-          class="task__input"
+          class="calculator__value"
           type="text"
           name=""
           id="inputLength"
           placeholder="введите длину..."
         />
         <input
-          class="task__input"
+          class="calculator__value"
           type="text"
           name=""
           id="inputWidth"
           placeholder="введите ширину..."
         />
-        <p class="task__answer" id="taskAnswer21">Периметр квадрата:</p>
-        <p class="task__answer" id="taskAnswer22">Площадь квадрата:</p>
+        <p class="calculator__answer" id="taskAnswer21">Периметр квадрата:</p>
+        <p class="calculator__answer" id="taskAnswer22">Площадь квадрата:</p>
         <button class="button" id="buttonSub1">рассчитать</button>
       </div>
     </section>
 
-    <section class="task">
-      <h2 class="task__description">
+    <section class="calculator">
+      <h2 class="calculator__description">
         Сделайте калькулятор, который будет находить площадь круга и длину
         <u> окружности</u>
       </h2>
-      <h3 class="task__hints">
+      <h3 class="calculator__hints">
         Формула площади круга: S = d*d : 4 × π, где S — это площадь, d — это
         диаметр, π — число Пи
       </h3>
-      <h3 class="task__hints">
+      <h3 class="calculator__hints">
         Формула длины окружности: l = πd, где l — длина окружности, π — число
         Пи, d — диаметр окружности
       </h3>
 
-      <div class="task__keys">
+      <div class="calculator__keys">
         <input
-          class="task__input"
+          class="calculator__value"
           type="text"
           name=""
           id="input3"
           placeholder="введите диаметр круга..."
         />
-        <p class="task__answer" id="taskAnswer31">Площадь круга:</p>
-        <p class="task__answer" id="taskAnswer32">Длина окружности:</p>
+        <p class="calculator__answer" id="taskAnswer31">Площадь круга:</p>
+        <p class="calculator__answer" id="taskAnswer32">Длина окружности:</p>
       </div>
     </section>
 
-    <section class="task">
-      <h2 class="task__description">
+    <section class="calculator">
+      <h2 class="calculator__description">
         Сделайте калькулятор, который будет находить площадь
         <u> треугольника</u> по трем сторонам
       </h2>
-      <h3 class="task__hints">
+      <h3 class="calculator__hints">
         Формула: S = &#8730; (p*(p-a)*(p-b)*(p-c)), где p – полупериметр
         треугольника, a, b, c – длины сторон треугольника.
       </h3>
 
-      <div class="task__keys">
+      <div class="calculator__keys">
         <input
-          class="task__input"
+          class="calculator__value"
           type="text"
           name=""
           id="input4A"
           placeholder="введите 1-ое значение..."
         />
         <input
-          class="task__input"
+          class="calculator__value"
           type="text"
           name=""
           id="input4B"
           placeholder="введите 2-ое значение..."
         />
         <input
-          class="task__input"
+          class="calculator__value"
           type="text"
           name=""
           id="input4C"
           placeholder="введите 3-е значение..."
         />
 
-        <div class="task__space">
-          <p class="task__answer" id="taskAnswer4">Площадь треугольника:</p>
+        <div class="calculator__space">
+          <p class="calculator__answer" id="taskAnswer4">
+            Площадь треугольника:
+          </p>
 
           <button class="button" id="buttonSub2">рассчитать</button>
         </div>
       </div>
     </section>
 
-    <section class="task">
-      <h2 class="task__description">
+    <section class="calculator">
+      <h2 class="calculator__description">
         Сделайте обычный калькулятор при помощи экранной клавиатуры
       </h2>
 
-      <div class="task__keys">
+      <div class="calculator__keys">
         <div class="calcul">
           <button class="calcul__btn-stl calcul__btns" id="button1">1</button>
           <button class="calcul__btn-stl calcul__btns" id="button2">2</button>
