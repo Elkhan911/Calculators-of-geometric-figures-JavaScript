@@ -28,29 +28,38 @@
   font-size: 20px;
 }
 
+.calculator__values {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
 .calculator__value {
   height: 40px;
-  width: 200px;
+  width: 300px;
 }
 
 .calculator__keys {
   border: 1px solid black;
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 50px 20px;
   text-align: center;
   display: flex;
   justify-content: space-around;
   font-size: 20px;
+  flex-wrap: wrap;
 }
 
 .calculator__key {
   width: 300px;
 }
 
-.button {
-  width: 100px;
-  height: 36px;
+.calculator__button {
+  width: 300px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .calcul__btn-stl {
