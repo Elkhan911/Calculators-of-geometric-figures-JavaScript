@@ -11,11 +11,11 @@ let taskAnswer21 = document.querySelector("#_taskAnswer21");
 let taskAnswer22 = document.querySelector("#_taskAnswer22");
 let taskAnswer23 = document.querySelector("#_taskAnswer23");
 let taskAnswer24 = document.querySelector("#_taskAnswer24");
-
 let buttonSub1 = document.querySelector("#_buttonSub1");
-let input3 = document.querySelector("#input3");
-let taskAnswer31 = document.querySelector("#taskAnswer31");
-let taskAnswer32 = document.querySelector("#taskAnswer32");
+let input3 = document.querySelector("#_input3");
+let taskAnswer31 = document.querySelector("#_taskAnswer31");
+let taskAnswer32 = document.querySelector("#_taskAnswer32");
+
 let input4A = document.querySelector("#input4A");
 let input4B = document.querySelector("#input4B");
 let input4C = document.querySelector("#input4C");
@@ -25,22 +25,17 @@ let buttonPlus = document.querySelector("#buttonPlus");
 let buttonMinus = document.querySelector("#buttonMinus");
 let buttonMultiply = document.querySelector("#buttonMultiply");
 let buttonDivide = document.querySelector("#buttonDivide");
-
 let deleteSymbolBtn = document.querySelector("#deleteSymbol");
 let clearSymbolsBtn = document.querySelector("#clearSymbols");
 let enterBtn1 = document.querySelector("#enterBtn1");
 let enterBtn2 = document.querySelector("#enterBtn2");
-
 let calculValue = document.querySelector("#calculValue");
-
 let calculVariable1 = document.querySelector("#calculVariable1");
 let calculVariable2 = document.querySelector("#calculVariable2");
 let calcuResult = document.querySelector("#calculResult");
 let NewOperationBtn = document.querySelector("#NewOperationBtn");
-
 let firstvariable = document.querySelector("#firstvariable");
 let secondVariable = document.querySelector("#secondVariable");
-
 let buttons = document.querySelectorAll(".calcul__btns");
 
 //************************************************************************************************************** */
@@ -94,11 +89,16 @@ buttonSub1.addEventListener("click", function () {
 });
 
 // Third Calculator
-input3.addEventListener("blur", function () {
-  taskAnswer31.textContent =
-    "Площадь круга:  " + ((Number(input3.value) ** 2 / 4) * Math.PI).toFixed(2);
-  taskAnswer32.textContent =
-    "Длина окружности: " + (Number(input3.value) * Math.PI).toFixed(2);
+input3.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (isItNaN(input3.value)) {
+      taskAnswer31.textContent = (
+        (Number(input3.value) ** 2 / 4) *
+        Math.PI
+      ).toFixed(2);
+      taskAnswer32.textContent = (Number(input3.value) * Math.PI).toFixed(2);
+    }
+  }
 });
 
 // Fourth Calculator

@@ -10,7 +10,7 @@
 
   <body class="page">
     <h1 class="page__header">Калькулторы геометрических фигур</h1>
-
+    <!-- First Calculator -->
     <section class="calculator">
       <h2 class="calculator__description">
         Калькулятор для подсчета площади и периметр
@@ -22,7 +22,6 @@
       <h3 class="calculator__formula">
         Формула площади квадрата: S = a × a, где S — площадь, a — сторона
       </h3>
-
       <div class="calculator__keys">
         <input
           class="calculator__value"
@@ -41,6 +40,7 @@
       </div>
     </section>
 
+    <!-- Second Calculator -->
     <section class="calculator">
       <h2 class="calculator__description">
         Калькулятор, для подсчета площади и периметра
@@ -54,7 +54,6 @@
         Формула площади прямоугольника: S = a × b, где S — площадь, a — сторона,
         b — сторона
       </h3>
-
       <div class="calculator__keys">
         <div class="calculator__values">
           <input
@@ -92,14 +91,14 @@
             <span id="_taskAnswer24" class="calculator__key"></span>
           </p>
         </div>
-
         <button class="calculator__button" id="_buttonSub1">Рассчитать</button>
       </div>
     </section>
 
+    <!-- Third Calculator -->
     <section class="calculator">
       <h2 class="calculator__description">
-        Сделайте калькулятор, который будет находить площадь круга и длину
+        Калькулятор, для подсчета площади круга и длины
         <u> окружности</u>
       </h2>
       <h3 class="calculator__formula">
@@ -110,20 +109,26 @@
         Формула длины окружности: l = πd, где l — длина окружности, π — число
         Пи, d — диаметр окружности
       </h3>
-
       <div class="calculator__keys">
         <input
           class="calculator__value"
           type="text"
           name=""
-          id="input3"
+          id="_input3"
           placeholder="Введите диаметр круга..."
         />
-        <p class="calculator__key" id="taskAnswer31">Площадь круга:</p>
-        <p class="calculator__key" id="taskAnswer32">Длина окружности:</p>
+        <p class="calculator__key">
+          Площадь круга:
+          <span class="calculator__key" id="_taskAnswer31"></span>
+        </p>
+        <p class="calculator__key">
+          Длина окружности:
+          <span class="calculator__key" id="_taskAnswer32"></span>
+        </p>
       </div>
     </section>
 
+    <!-- Fourth Calculator -->
     <section class="calculator">
       <h2 class="calculator__description">
         Сделайте калькулятор, который будет находить площадь
@@ -133,7 +138,6 @@
         Формула: S = &#8730; (p*(p-a)*(p-b)*(p-c)), где p – полупериметр
         треугольника, a, b, c – длины сторон треугольника.
       </h3>
-
       <div class="calculator__keys">
         <input
           class="calculator__value"
@@ -156,7 +160,6 @@
           id="input4C"
           placeholder="Введите 3-е значение..."
         />
-
         <div class="calculator__space">
           <p class="calculator__key" id="taskAnswer4">Площадь треугольника:</p>
 
@@ -165,11 +168,11 @@
       </div>
     </section>
 
+    <!-- Main Calculator-->
     <section class="calculator">
       <h2 class="calculator__description">
         Сделайте обычный калькулятор при помощи экранной клавиатуры
       </h2>
-
       <div class="calculator__keys">
         <div class="calcul">
           <button class="calcul__btn-stl calcul__btns" id="button1">1</button>
@@ -183,7 +186,6 @@
           <button class="calcul__btn-stl calcul__btns" id="button7">7</button>
           <button class="calcul__btn-stl calcul__btns" id="button8">8</button>
           <button class="calcul__btn-stl calcul__btns" id="button9">9</button>
-
           <button class="calcul__btn-stl calcul__btns" id="button10">0</button>
         </div>
         <div>
@@ -192,7 +194,6 @@
           <button class="calcul__btn-stl" id="buttonMultiply">*</button>
           <button class="calcul__btn-stl" id="buttonDivide">/</button>
         </div>
-
         <div>
           <button class="calcul__buttons-extra" id="deleteSymbol">
             Удалить символ
@@ -210,7 +211,6 @@
             </button>
           </div>
         </div>
-
         <div>
           <input
             class="calcul__values"
@@ -222,7 +222,6 @@
             Начать заново
           </button>
         </div>
-
         <div id="parentDiv">
           <p class="calcul__result" id="calculVariable1">
             Ваша первая переменная: <span id="firstvariable"></span>
@@ -234,7 +233,6 @@
         </div>
       </div>
     </section>
-
     <script src="script.js"></script>
   </body>
 </html>
