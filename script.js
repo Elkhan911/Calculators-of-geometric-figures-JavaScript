@@ -9,7 +9,10 @@ let inputLength = document.querySelector("#_inputLength");
 let inputWidth = document.querySelector("#_inputWidth");
 let taskAnswer21 = document.querySelector("#_taskAnswer21");
 let taskAnswer22 = document.querySelector("#_taskAnswer22");
-let buttonSub1 = document.querySelector("#buttonSub1");
+let taskAnswer23 = document.querySelector("#_taskAnswer23");
+let taskAnswer24 = document.querySelector("#_taskAnswer24");
+
+let buttonSub1 = document.querySelector("#_buttonSub1");
 let input3 = document.querySelector("#input3");
 let taskAnswer31 = document.querySelector("#taskAnswer31");
 let taskAnswer32 = document.querySelector("#taskAnswer32");
@@ -44,14 +47,19 @@ let buttons = document.querySelectorAll(".calcul__btns");
 //******************************************** */ FUNCTIONS
 //************************************************************************************************************** */
 
+// функция для проверки isNaN
+function isItNaN(value) {
+  if (isNaN(value)) {
+    alert("Нужно ввести число");
+    input1.value = "";
+    return false;
+  } else return true;
+}
+
 // First Calculator
 input1.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
-    if (isNaN(input1.value)) {
-      alert("Нужно ввести число");
-      input1.value = "";
-    }
-    if (typeof Number(input1.value) == "number") {
+    if (isItNaN(input1.value)) {
       taskAnswer11.textContent = Number(input1.value) * 4;
       taskAnswer12.textContent = Number(input1.value) ** 2;
     }
@@ -60,23 +68,30 @@ input1.addEventListener("keydown", function (event) {
 });
 
 // Second Calculator
-buttonSub1.addEventListener("click", areaAndPerimeterRectangle);
-function areaAndPerimeterRectangle() {
-  if (isNaN(inputLength.value) || isNaN(inputWidth.value)) {
-    alert("Нужно ввести число");
-    input1.value = "";
+inputLength.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (isItNaN(inputLength.value)) {
+      taskAnswer21.textContent = inputLength.value;
+      inputLength.value = "";
+    }
   }
-  if (
-    typeof Number(inputLength.value) == "number" &&
-    typeof Number(inputWidth.value) == "number"
-  ) {
-    taskAnswer21.textContent =
-      "Периметр квадрата: " +
-      (Number(inputLength.value) + Number(inputWidth.value)) * 2;
-    taskAnswer22.textContent =
-      "Площадь квадрата: " + inputLength.value * inputWidth.value;
+});
+
+inputWidth.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (isItNaN(inputWidth.value)) {
+      taskAnswer22.textContent = inputWidth.value;
+      inputWidth.value = "";
+    }
   }
-}
+});
+
+buttonSub1.addEventListener("click", function () {
+  taskAnswer23.textContent =
+    (Number(taskAnswer21.textContent) + Number(taskAnswer22.textContent)) * 2;
+  taskAnswer24.textContent =
+    taskAnswer21.textContent * taskAnswer22.textContent;
+});
 
 // Third Calculator
 input3.addEventListener("blur", function () {
