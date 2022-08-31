@@ -2,9 +2,9 @@
 //******************************************** */ VARIABLES
 //************************************************************************************************************** */
 
-let input1 = document.querySelector("#input1");
-let taskAnswer11 = document.querySelector("#taskAnswer1");
-let taskAnswer12 = document.querySelector("#taskAnswer2");
+let input1 = document.querySelector("#_input1");
+let taskAnswer11 = document.querySelector("#_taskAnswer1");
+let taskAnswer12 = document.querySelector("#_taskAnswer2");
 let inputLength = document.querySelector("#inputLength");
 let inputWidth = document.querySelector("#inputWidth");
 let taskAnswer21 = document.querySelector("#taskAnswer21");
@@ -45,16 +45,17 @@ let buttons = document.querySelectorAll(".calcul__btns");
 //************************************************************************************************************** */
 
 // First Calculator
-input1.addEventListener("blur", function () {
-  if (isNaN(input1.value)) {
-    alert("Нужно ввести число");
+input1.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (isNaN(input1.value)) {
+      alert("Нужно ввести число");
+      input1.value = "";
+    }
+    if (typeof Number(input1.value) == "number") {
+      taskAnswer11.textContent = Number(input1.value) * 4;
+      taskAnswer12.textContent = Number(input1.value) ** 2;
+    }
     input1.value = "";
-  }
-  if (typeof Number(input1.value) == "number") {
-    taskAnswer11.textContent =
-      "Периметр квадрата:" + "  " + Number(input1.value) * 4;
-    taskAnswer12.textContent =
-      "Площадь квадрата:" + "  " + Number(input1.value) ** 2;
   }
 });
 

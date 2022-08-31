@@ -16,10 +16,10 @@
         Калькулятор для подсчета площади и периметр
         <u> квадрата</u>
       </h2>
-      <h3 class="calculator__hints">
+      <h3 class="calculator__formula">
         Формула периметра квадрата: P = 4 × a, где Р — периметр, а — сторона
       </h3>
-      <h3 class="calculator__hints">
+      <h3 class="calculator__formula">
         Формула площади квадрата: S = a × a, где S — площадь, a — сторона
       </h3>
 
@@ -27,12 +27,17 @@
         <input
           class="calculator__value"
           type="text"
-          name=""
-          id="input1"
-          placeholder="введите значение..."
+          id="_input1"
+          placeholder="Введите значение..."
         />
-        <p class="calculator__answer" id="taskAnswer1">Периметр квадрата:</p>
-        <p class="calculator__answer" id="taskAnswer2">Площадь квадрата:</p>
+        <p class="calculator__key">
+          Периметр квадрата:
+          <span id="_taskAnswer1" class="calculator__key"></span>
+        </p>
+        <p class="calculator__key">
+          Площадь квадрата:
+          <span id="_taskAnswer2" class="calculator__key"></span>
+        </p>
       </div>
     </section>
 
@@ -41,11 +46,11 @@
         Сделайте калькулятор, который будет находить площадь и периметр
         <u> прямоугольника </u>
       </h2>
-      <h3 class="calculator__hints">
+      <h3 class="calculator__formula">
         Формула периметра прямоугольника: P = 2(a+b), где Р — периметр, а —
         сторона, b — сторона
       </h3>
-      <h3 class="calculator__hints">
+      <h3 class="calculator__formula">
         Формула площади прямоугольника: S = a × b, где S — площадь, a — сторона,
         b — сторона
       </h3>
@@ -56,17 +61,17 @@
           type="text"
           name=""
           id="inputLength"
-          placeholder="введите длину..."
+          placeholder="Введите длину..."
         />
         <input
           class="calculator__value"
           type="text"
           name=""
           id="inputWidth"
-          placeholder="введите ширину..."
+          placeholder="Введите ширину..."
         />
-        <p class="calculator__answer" id="taskAnswer21">Периметр квадрата:</p>
-        <p class="calculator__answer" id="taskAnswer22">Площадь квадрата:</p>
+        <p class="calculator__key" id="taskAnswer21">Периметр квадрата:</p>
+        <p class="calculator__key" id="taskAnswer22">Площадь квадрата:</p>
         <button class="button" id="buttonSub1">рассчитать</button>
       </div>
     </section>
@@ -76,11 +81,11 @@
         Сделайте калькулятор, который будет находить площадь круга и длину
         <u> окружности</u>
       </h2>
-      <h3 class="calculator__hints">
+      <h3 class="calculator__formula">
         Формула площади круга: S = d*d : 4 × π, где S — это площадь, d — это
         диаметр, π — число Пи
       </h3>
-      <h3 class="calculator__hints">
+      <h3 class="calculator__formula">
         Формула длины окружности: l = πd, где l — длина окружности, π — число
         Пи, d — диаметр окружности
       </h3>
@@ -91,10 +96,10 @@
           type="text"
           name=""
           id="input3"
-          placeholder="введите диаметр круга..."
+          placeholder="Введите диаметр круга..."
         />
-        <p class="calculator__answer" id="taskAnswer31">Площадь круга:</p>
-        <p class="calculator__answer" id="taskAnswer32">Длина окружности:</p>
+        <p class="calculator__key" id="taskAnswer31">Площадь круга:</p>
+        <p class="calculator__key" id="taskAnswer32">Длина окружности:</p>
       </div>
     </section>
 
@@ -103,7 +108,7 @@
         Сделайте калькулятор, который будет находить площадь
         <u> треугольника</u> по трем сторонам
       </h2>
-      <h3 class="calculator__hints">
+      <h3 class="calculator__formula">
         Формула: S = &#8730; (p*(p-a)*(p-b)*(p-c)), где p – полупериметр
         треугольника, a, b, c – длины сторон треугольника.
       </h3>
@@ -114,27 +119,25 @@
           type="text"
           name=""
           id="input4A"
-          placeholder="введите 1-ое значение..."
+          placeholder="Введите 1-ое значение..."
         />
         <input
           class="calculator__value"
           type="text"
           name=""
           id="input4B"
-          placeholder="введите 2-ое значение..."
+          placeholder="Введите 2-ое значение..."
         />
         <input
           class="calculator__value"
           type="text"
           name=""
           id="input4C"
-          placeholder="введите 3-е значение..."
+          placeholder="Введите 3-е значение..."
         />
 
         <div class="calculator__space">
-          <p class="calculator__answer" id="taskAnswer4">
-            Площадь треугольника:
-          </p>
+          <p class="calculator__key" id="taskAnswer4">Площадь треугольника:</p>
 
           <button class="button" id="buttonSub2">рассчитать</button>
         </div>
