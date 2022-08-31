@@ -54,6 +54,11 @@
 
 .calculator__key {
   width: 300px;
+  height: 30px;
+}
+
+.calculator__key_smaller {
+  width: 200px;
 }
 
 .calculator__button {

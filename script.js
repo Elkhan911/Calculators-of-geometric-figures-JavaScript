@@ -70,8 +70,8 @@ inputLength.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
     if (isItNaNorEmpty(inputLength.value)) {
       span21.textContent = inputLength.value;
-      inputLength.value = "";
     }
+    inputLength.value = "";
   }
 });
 
@@ -79,8 +79,8 @@ inputWidth.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
     if (isItNaNorEmpty(inputWidth.value)) {
       span22.textContent = inputWidth.value;
-      inputWidth.value = "";
     }
+    inputWidth.value = "";
   }
 });
 
@@ -103,18 +103,55 @@ input3.addEventListener("keydown", function (event) {
 });
 
 // Fourth Calculator
+
+input4A.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (isItNaNorEmpty(input4A.value)) {
+      span4A.textContent = this.value;
+    }
+    this.value = "";
+  }
+});
+
+input4B.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (isItNaNorEmpty(input4B.value)) {
+      span4B.textContent = this.value;
+    }
+    this.value = "";
+  }
+});
+
+input4C.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
+    if (isItNaNorEmpty(input4C.value)) {
+      span4C.textContent = this.value;
+    }
+    this.value = "";
+  }
+});
+
 buttonSub2.addEventListener("click", function () {
   let perimetr =
-    Number(input4A.value) + Number(input4B.value) + Number(input4C.value);
+    Number(span4A.textContent) +
+    Number(span4B.textContent) +
+    Number(span4C.textContent);
+
   let halfPerimetr = perimetr / 2;
-  span4.textContent =
-    "Плоащь треугольника " +
-    Math.sqrt(
-      halfPerimetr *
-        (halfPerimetr - Number(input4A.value)) *
-        (halfPerimetr - Number(input4B.value)) *
-        (halfPerimetr - Number(input4C.value))
-    );
+
+  span4.textContent = Math.sqrt(
+    halfPerimetr *
+      (halfPerimetr - Number(span4A.textContent)) *
+      (halfPerimetr - Number(span4B.textContent)) *
+      (halfPerimetr - Number(span4C.textContent))
+  ).toFixed(2);
+
+  console.log(perimetr);
+  console.log(halfPerimetr);
+  console.log(Number(span4A.textContent));
+  console.log(Number(span4B.textContent));
+  console.log(Number(span4C.textContent));
+  console.log(span4.textContent);
 });
 
 // Main Calculator
