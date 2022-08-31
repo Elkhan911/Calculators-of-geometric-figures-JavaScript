@@ -3,23 +3,26 @@
 //************************************************************************************************************** */
 
 let input1 = document.querySelector("#_input1");
-let taskAnswer11 = document.querySelector("#_taskAnswer1");
-let taskAnswer12 = document.querySelector("#_taskAnswer2");
+let span11 = document.querySelector("#_span1");
+let span12 = document.querySelector("#_span2");
 let inputLength = document.querySelector("#_inputLength");
 let inputWidth = document.querySelector("#_inputWidth");
-let taskAnswer21 = document.querySelector("#_taskAnswer21");
-let taskAnswer22 = document.querySelector("#_taskAnswer22");
-let taskAnswer23 = document.querySelector("#_taskAnswer23");
-let taskAnswer24 = document.querySelector("#_taskAnswer24");
+let span21 = document.querySelector("#_span21");
+let span22 = document.querySelector("#_span22");
+let span23 = document.querySelector("#_span23");
+let span24 = document.querySelector("#_span24");
 let buttonSub1 = document.querySelector("#_buttonSub1");
 let input3 = document.querySelector("#_input3");
-let taskAnswer31 = document.querySelector("#_taskAnswer31");
-let taskAnswer32 = document.querySelector("#_taskAnswer32");
+let span31 = document.querySelector("#_span31");
+let span32 = document.querySelector("#_span32");
 
-let input4A = document.querySelector("#input4A");
-let input4B = document.querySelector("#input4B");
-let input4C = document.querySelector("#input4C");
-let taskAnswer4 = document.querySelector("#taskAnswer4");
+let input4A = document.querySelector("#_input4A");
+let input4B = document.querySelector("#_input4B");
+let input4C = document.querySelector("#_input4C");
+let span4A = document.querySelector("#_span4A");
+let span4B = document.querySelector("#_span4B");
+let span4C = document.querySelector("#_span4C");
+let span4 = document.querySelector("#span4");
 let buttonSub2 = document.querySelector("#buttonSub2");
 let buttonPlus = document.querySelector("#buttonPlus");
 let buttonMinus = document.querySelector("#buttonMinus");
@@ -43,8 +46,8 @@ let buttons = document.querySelectorAll(".calcul__btns");
 //************************************************************************************************************** */
 
 // функция для проверки isNaN
-function isItNaN(value) {
-  if (isNaN(value)) {
+function isItNaNorEmpty(value) {
+  if (isNaN(value) || value == "" || value == " " || value == "  ") {
     alert("Нужно ввести число");
     input1.value = "";
     return false;
@@ -54,9 +57,9 @@ function isItNaN(value) {
 // First Calculator
 input1.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
-    if (isItNaN(input1.value)) {
-      taskAnswer11.textContent = Number(input1.value) * 4;
-      taskAnswer12.textContent = Number(input1.value) ** 2;
+    if (isItNaNorEmpty(input1.value)) {
+      span11.textContent = Number(input1.value) * 4;
+      span12.textContent = Number(input1.value) ** 2;
     }
     input1.value = "";
   }
@@ -65,8 +68,8 @@ input1.addEventListener("keydown", function (event) {
 // Second Calculator
 inputLength.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
-    if (isItNaN(inputLength.value)) {
-      taskAnswer21.textContent = inputLength.value;
+    if (isItNaNorEmpty(inputLength.value)) {
+      span21.textContent = inputLength.value;
       inputLength.value = "";
     }
   }
@@ -74,29 +77,27 @@ inputLength.addEventListener("keydown", function (event) {
 
 inputWidth.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
-    if (isItNaN(inputWidth.value)) {
-      taskAnswer22.textContent = inputWidth.value;
+    if (isItNaNorEmpty(inputWidth.value)) {
+      span22.textContent = inputWidth.value;
       inputWidth.value = "";
     }
   }
 });
 
 buttonSub1.addEventListener("click", function () {
-  taskAnswer23.textContent =
-    (Number(taskAnswer21.textContent) + Number(taskAnswer22.textContent)) * 2;
-  taskAnswer24.textContent =
-    taskAnswer21.textContent * taskAnswer22.textContent;
+  span23.textContent =
+    (Number(span21.textContent) + Number(span22.textContent)) * 2;
+  span24.textContent = span21.textContent * span22.textContent;
 });
 
 // Third Calculator
 input3.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
-    if (isItNaN(input3.value)) {
-      taskAnswer31.textContent = (
-        (Number(input3.value) ** 2 / 4) *
-        Math.PI
-      ).toFixed(2);
-      taskAnswer32.textContent = (Number(input3.value) * Math.PI).toFixed(2);
+    if (isItNaNorEmpty(input3.value)) {
+      span31.textContent = ((Number(input3.value) ** 2 / 4) * Math.PI).toFixed(
+        2
+      );
+      span32.textContent = (Number(input3.value) * Math.PI).toFixed(2);
     }
   }
 });
@@ -106,7 +107,7 @@ buttonSub2.addEventListener("click", function () {
   let perimetr =
     Number(input4A.value) + Number(input4B.value) + Number(input4C.value);
   let halfPerimetr = perimetr / 2;
-  taskAnswer4.textContent =
+  span4.textContent =
     "Плоащь треугольника " +
     Math.sqrt(
       halfPerimetr *

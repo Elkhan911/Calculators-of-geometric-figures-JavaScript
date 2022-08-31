@@ -31,11 +31,11 @@
         />
         <p class="calculator__key">
           Периметр квадрата:
-          <span id="_taskAnswer1" class="calculator__key"></span>
+          <span id="_span1" class="calculator__key"></span>
         </p>
         <p class="calculator__key">
           Площадь квадрата:
-          <span id="_taskAnswer2" class="calculator__key"></span>
+          <span id="_span2" class="calculator__key"></span>
         </p>
       </div>
     </section>
@@ -74,21 +74,21 @@
         <div class="calculator__values">
           <p class="calculator__key">
             Длина прямоугольника:
-            <span id="_taskAnswer21" class="calculator__key"></span>
+            <span id="_span21" class="calculator__key"></span>
           </p>
           <p class="calculator__key">
             Ширина прямоугольника:
-            <span id="_taskAnswer22" class="calculator__key"></span>
+            <span id="_span22" class="calculator__key"></span>
           </p>
         </div>
         <div class="calculator__values">
           <p class="calculator__key">
             Периметр квадрата:
-            <span id="_taskAnswer23" class="calculator__key"></span>
+            <span id="_span23" class="calculator__key"></span>
           </p>
           <p class="calculator__key">
             Площадь квадрата:
-            <span id="_taskAnswer24" class="calculator__key"></span>
+            <span id="_span24" class="calculator__key"></span>
           </p>
         </div>
         <button class="calculator__button" id="_buttonSub1">Рассчитать</button>
@@ -119,11 +119,11 @@
         />
         <p class="calculator__key">
           Площадь круга:
-          <span class="calculator__key" id="_taskAnswer31"></span>
+          <span class="calculator__key" id="_span31"></span>
         </p>
         <p class="calculator__key">
           Длина окружности:
-          <span class="calculator__key" id="_taskAnswer32"></span>
+          <span class="calculator__key" id="_span32"></span>
         </p>
       </div>
     </section>
@@ -131,7 +131,7 @@
     <!-- Fourth Calculator -->
     <section class="calculator">
       <h2 class="calculator__description">
-        Сделайте калькулятор, который будет находить площадь
+        Калькулятор, для подсчета площади
         <u> треугольника</u> по трем сторонам
       </h2>
       <h3 class="calculator__formula">
@@ -143,26 +143,41 @@
           class="calculator__value"
           type="text"
           name=""
-          id="input4A"
+          id="_input4A"
           placeholder="Введите 1-ое значение..."
         />
         <input
           class="calculator__value"
           type="text"
           name=""
-          id="input4B"
+          id="_input4B"
           placeholder="Введите 2-ое значение..."
         />
         <input
           class="calculator__value"
           type="text"
           name=""
-          id="input4C"
+          id="_input4C"
           placeholder="Введите 3-е значение..."
         />
-        <div class="calculator__space">
-          <p class="calculator__key" id="taskAnswer4">Площадь треугольника:</p>
 
+        <div class="calculator__keys">
+          <p class="calculator__key">
+            Первое значение:
+            <span id="_span4A" class="calculator__key"></span>
+          </p>
+          <p class="calculator__key">
+            Второе значение:
+            <span id="_span4B" class="calculator__key"></span>
+          </p>
+          <p class="calculator__key">
+            Третье значение:
+            <span id="_span4C" class="calculator__key"></span>
+          </p>
+        </div>
+
+        <div class="calculator__keys">
+          <p class="calculator__key" id="span4">Площадь треугольника:</p>
           <button class="calculator__button" id="buttonSub2">рассчитать</button>
         </div>
       </div>
