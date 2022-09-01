@@ -28,14 +28,14 @@ let buttonSub2 = document.querySelector("#_buttonSub2");
 //******************************************** */ FUNCTIONS
 //************************************************************************************************************** */
 
-// функция для проверки isNaN
-// function isItNaNorEmpty(value) {
-//   if (isNaN(value) || value == "" || value == " " || value == "  ") {
-//     alert("Нужно ввести число");
-//     input1.value = "";
-//     return false;
-//   } else return true;
-// }
+// функция для проверки isNaN и пустоты введенных значений
+function isItNaNorEmpty(value) {
+  if (isNaN(value) || value == "" || value == " " || value == "  ") {
+    alert("Нужно ввести число");
+    input1.value = "";
+    return false;
+  } else return true;
+}
 
 // // First Calculator
 // input1.addEventListener("keydown", function (event) {
@@ -164,16 +164,18 @@ for (let button of buttons) {
 let variableCounter = 1;
 
 enterBtn.addEventListener("click", function () {
-  if (variableCounter == 1) {
-    variable1.textContent = inputCalc.value;
-    secondhint.classList.remove("calculator__hint_off");
-    inputCalc.value = "";
-    variableCounter = 2;
-  } else {
-    variable2.textContent = inputCalc.value;
-    thirdHint.classList.remove("calculator__hint_off");
-    inputCalc.value = "";
-    variableCounter = 1;
+  if (isItNaNorEmpty(inputCalc.value)) {
+    if (variableCounter == 1) {
+      variable1.textContent = inputCalc.value;
+      secondhint.classList.remove("calculator__hint_off");
+      inputCalc.value = "";
+      variableCounter = 2;
+    } else {
+      variable2.textContent = inputCalc.value;
+      thirdHint.classList.remove("calculator__hint_off");
+      inputCalc.value = "";
+      variableCounter = 1;
+    }
   }
 });
 
