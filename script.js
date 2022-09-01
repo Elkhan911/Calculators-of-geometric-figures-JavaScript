@@ -144,14 +144,14 @@ let deleteSymbolBtn = document.querySelector("#_deleteSymbol");
 let clearSymbolsBtn = document.querySelector("#_clearSymbols");
 
 let secondhint = document.querySelector("#_secondHint");
+let thirdHint = document.querySelector("#_thirdHint");
 
-let enterBtn1 = document.querySelector("#_enterBtn1");
-let enterBtn2 = document.querySelector("#enterBtn2");
+let enterBtn = document.querySelector("#_enterBtn");
 let inputCalc = document.querySelector("#_inputCalc");
 let calculVariable1 = document.querySelector("#calculVariable1");
 let calculVariable2 = document.querySelector("#calculVariable2");
-let calcuResult = document.querySelector("#calculResult");
-let NewOperationBtn = document.querySelector("#NewOperationBtn");
+let calcuResult = document.querySelector("#_calculResult");
+let newOperationBtn = document.querySelector("#_newOperationBtn");
 let firstvariable = document.querySelector("#_firstvariable");
 let secondVariable = document.querySelector("#_secondVariable");
 let buttons = document.querySelectorAll(".btns");
@@ -180,7 +180,7 @@ deleteSymbolBtn.addEventListener("click", function () {
 //*****************************************tut */
 
 // // ввод данных для первой перменной
-// enterBtn1.addEventListener("click", function () {
+// enterBtn.addEventListener("click", function () {
 //   firstvariable.textContent = "";
 //   firstvariable.textContent = inputCalc.value;
 //   inputCalc.value = "";
@@ -195,7 +195,7 @@ deleteSymbolBtn.addEventListener("click", function () {
 
 let variableCounter = 1;
 
-enterBtn1.addEventListener("click", function () {
+enterBtn.addEventListener("click", function () {
   if (variableCounter == 1) {
     firstvariable.textContent = inputCalc.value;
     secondhint.classList.remove("calculator__hint_off");
@@ -203,59 +203,62 @@ enterBtn1.addEventListener("click", function () {
     variableCounter = 2;
   } else {
     secondVariable.textContent = inputCalc.value;
+    thirdHint.classList.remove("calculator__hint_off");
     inputCalc.value = "";
     variableCounter = 1;
   }
 });
 
-// function Plus(a, b) {
-//   return Number(a) + Number(b);
-// }
+function Plus(a, b) {
+  return Number(a) + Number(b);
+}
 
-// function Minus(a, b) {
-//   return Number(a) - Number(b);
-// }
+function Minus(a, b) {
+  return Number(a) - Number(b);
+}
 
-// function Multiply(a, b) {
-//   return Number(a) * Number(b);
-// }
+function Multiply(a, b) {
+  return Number(a) * Number(b);
+}
 
-// function Divide(a, b) {
-//   return Number(a) / Number(b);
-// }
+function Divide(a, b) {
+  return Number(a) / Number(b);
+}
 
-// // начать заново, сбросить все введенные данные
-// NewOperationBtn.addEventListener("click", function () {
-//   firstvariable.textContent = "";
-//   secondVariable.textContent = "";
-//   calcuResult.textContent = "Результат:";
-//   inputCalc.value = "";
-// });
+// начать заново, сбросить все введенные данные
+newOperationBtn.addEventListener("click", function () {
+  firstvariable.textContent = "";
+  secondVariable.textContent = "";
+  calcuResult.textContent = "";
+  inputCalc.value = "";
+  secondhint.classList.add("calculator__hint_off");
+  thirdHint.classList.add("calculator__hint_off");
+});
 
-// btnPlus.addEventListener("click", function () {
-//   let a = firstvariable.textContent;
-//   let b = secondVariable.textContent;
+btnPlus.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  let b = secondVariable.textContent;
 
-//   calcuResult.textContent += " " + Plus(a, b);
-// });
+  calcuResult.textContent += " " + Plus(a, b);
+});
 
-// btnMinus.addEventListener("click", function () {
-//   let a = firstvariable.textContent;
-//   let b = secondVariable.textContent;
+btnMinus.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  let b = secondVariable.textContent;
 
-//   calcuResult.textContent += Minus(a, b);
-// });
+  calcuResult.textContent += Minus(a, b);
+});
 
-// btnMultiply.addEventListener("click", function () {
-//   let a = firstvariable.textContent;
-//   letb = secondVariable.textContent;
+btnMultiply.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  letb = secondVariable.textContent;
 
-//   calcuResult.textContent += Multiply(a, b);
-// });
+  calcuResult.textContent += Multiply(a, b);
+});
 
-// btnDivide.addEventListener("click", function () {
-//   let a = firstvariable.textContent;
-//   let b = secondVariable.textContent;
+btnDivide.addEventListener("click", function () {
+  let a = firstvariable.textContent;
+  let b = secondVariable.textContent;
 
-//   calcuResult.textContent += Divide(a, b);
-// });
+  calcuResult.textContent += Divide(a, b);
+});

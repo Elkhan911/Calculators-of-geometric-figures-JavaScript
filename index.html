@@ -196,8 +196,9 @@
         <p class="calculator__hint calculator__hint_off" id="_secondHint">
           2. Введите в экранную клавиатур второе значение и нажмите Enter
         </p>
-        <p class="calculator__hint calculator__hint_off" id="_secondhint">
-          3. Введите в экранную клавиатур первое значение и нажмите Enter
+        <p class="calculator__hint calculator__hint_off" id="_thirdHint">
+          3. Теперь выберите арифметическое действие (сложение, вычитание,
+          деление, умножение)
         </p>
       </div>
 
@@ -223,42 +224,40 @@
           <button class="calculator__button" id="_btnDivide">/</button>
         </div>
         <div class="calculator__buttons">
-          <button class="calcul__buttons-extra" id="_deleteSymbol">
+          <button class="calcul__button-big" id="_deleteSymbol">
             Удалить символ
           </button>
-          <button class="calcul__buttons-extra" id="_clearSymbols">
+          <button class="calcul__button-big" id="_clearSymbols">
             Очистить символы
           </button>
 
           <div class="calculator__buttons">
-            <button class="calcul__buttons-extra" id="_enterBtn1">
-              Enter для первой переменной
-            </button>
-            <button class="calcul__buttons-extra" id="enterBtn2">
-              Enter для второй переменной
-            </button>
+            <button class="calcul__button-big" id="_enterBtn">Enter</button>
           </div>
         </div>
 
         <div class="calculator__buttons">
           <input
-            class="calcul__values"
+            class="calculator__value"
             type="text"
             id="_inputCalc"
             placeholder="Введите значение переменной..."
           />
-          <button class="calcul__buttons-extra" id="NewOperationBtn">
+          <button class="calcul__button-big" id="_newOperationBtn">
             Начать заново
           </button>
         </div>
-        <div id="parentDiv" class="calculator__buttons">
+
+        <div class="calculator__buttons">
           <p class="calcul__result" id="calculVariable1">
             Ваша первая переменная: <span id="_firstvariable"></span>
           </p>
           <p class="calcul__result" id="calculVariable2">
             Ваша вторая переменная: <span id="_secondVariable"></span>
           </p>
-          <p class="calcul__result" id="calculResult">Результат:</p>
+          <p class="calcul__result">
+            Результат: <span id="_calculResult"></span>
+          </p>
         </div>
       </div>
     </section>
