@@ -175,29 +175,34 @@ enterBtn.addEventListener("click", function () {
   }
 });
 
-plusBtn.addEventListener("click", function plus() {
+plusBtn.addEventListener("click", plus);
+minusBtn.addEventListener("click", minus);
+multiplyBtn.addEventListener("click", multiply);
+divideBtn.addEventListener("click", divide);
+
+function plus() {
   calcuResult.textContent =
     Number(variable1.textContent) + Number(variable2.textContent);
   plusBtn.removeEventListener("click", plus);
-});
+}
 
-minusBtn.addEventListener("click", function minus() {
+function minus() {
   calcuResult.textContent =
     Number(variable1.textContent) - Number(variable2.textContent);
   minusBtn.removeEventListener("click", minus);
-});
+}
 
-multiplyBtn.addEventListener("click", function multiply() {
+function multiply() {
   calcuResult.textContent =
     Number(variable1.textContent) * Number(variable2.textContent);
   multiplyBtn.removeEventListener("click", multiply);
-});
+}
 
-divideBtn.addEventListener("click", function divide() {
+function divide() {
   calcuResult.textContent =
     Number(variable1.textContent) / Number(variable2.textContent);
   divideBtn.removeEventListener("click", divide);
-});
+}
 
 // функция удаления последнего символа
 deleteSymbolBtn.addEventListener("click", function () {
@@ -220,4 +225,9 @@ newOperationBtn.addEventListener("click", function () {
   inputCalc.value = "";
   secondhint.classList.add("calculator__hint_off");
   thirdHint.classList.add("calculator__hint_off");
+
+  plusBtn.addEventListener("click", plus);
+  minusBtn.addEventListener("click", minus);
+  multiplyBtn.addEventListener("click", multiply);
+  divideBtn.addEventListener("click", divide);
 });
