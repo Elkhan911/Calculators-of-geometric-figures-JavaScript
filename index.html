@@ -189,38 +189,49 @@
     <!-- Main Calculator-->
     <section class="calculator">
       <h2 class="calculator__header">Калькулятор с экранной клавиатурой</h2>
+      <div class="calculator__hints">
+        <p class="calculator__hint">
+          1. Введите в экранную клавиатур первое значение и нажмите Enter
+        </p>
+        <p class="calculator__hint calculator__hint_off" id="_secondHint">
+          2. Введите в экранную клавиатур второе значение и нажмите Enter
+        </p>
+        <p class="calculator__hint calculator__hint_off" id="_secondhint">
+          3. Введите в экранную клавиатур первое значение и нажмите Enter
+        </p>
+      </div>
 
       <div class="calculator__buttons-zone">
         <div class="calculator__buttons">
-          <button class="calculator__button btns" id="button1" val>1</button>
-          <button class="calculator__button btns" id="button2">2</button>
-          <button class="calculator__button btns" id="button3">3</button>
+          <button class="calculator__button btns">1</button>
+          <button class="calculator__button btns">2</button>
+          <button class="calculator__button btns">3</button>
           <div>
-            <button class="calculator__button btns" id="button4">4</button>
-            <button class="calculator__button btns" id="button5">5</button>
-            <button class="calculator__button btns" id="button6">6</button>
+            <button class="calculator__button btns">4</button>
+            <button class="calculator__button btns">5</button>
+            <button class="calculator__button btns">6</button>
           </div>
-          <button class="calculator__button btns" id="button7">7</button>
-          <button class="calculator__button btns" id="button8">8</button>
-          <button class="calculator__button btns" id="button9">9</button>
-          <button class="calculator__button btns" id="button10">0</button>
+          <button class="calculator__button btns">7</button>
+          <button class="calculator__button btns">8</button>
+          <button class="calculator__button btns">9</button>
+          <button class="calculator__button btns">0</button>
         </div>
         <div class="calculator__buttons">
-          <button class="calculator__button" id="buttonPlus">+</button>
-          <button class="calculator__button" id="buttonMinus">-</button>
-          <button class="calculator__button" id="buttonMultiply">*</button>
-          <button class="calculator__button" id="buttonDivide">/</button>
+          <button class="calculator__button" id="_btnPlus">+</button>
+          <button class="calculator__button" id="_btnMinus">-</button>
+          <button class="calculator__button" id="_btnMultiply">*</button>
+          <button class="calculator__button" id="_btnDivide">/</button>
         </div>
         <div class="calculator__buttons">
-          <button class="calcul__buttons-extra" id="deleteSymbol">
+          <button class="calcul__buttons-extra" id="_deleteSymbol">
             Удалить символ
           </button>
-          <button class="calcul__buttons-extra" id="clearSymbols">
+          <button class="calcul__buttons-extra" id="_clearSymbols">
             Очистить символы
           </button>
 
           <div class="calculator__buttons">
-            <button class="calcul__buttons-extra" id="enterBtn1">
+            <button class="calcul__buttons-extra" id="_enterBtn1">
               Enter для первой переменной
             </button>
             <button class="calcul__buttons-extra" id="enterBtn2">
@@ -233,7 +244,7 @@
           <input
             class="calcul__values"
             type="text"
-            id="calculValue"
+            id="_inputCalc"
             placeholder="Введите значение переменной..."
           />
           <button class="calcul__buttons-extra" id="NewOperationBtn">
@@ -242,10 +253,10 @@
         </div>
         <div id="parentDiv" class="calculator__buttons">
           <p class="calcul__result" id="calculVariable1">
-            Ваша первая переменная: <span id="firstvariable"></span>
+            Ваша первая переменная: <span id="_firstvariable"></span>
           </p>
           <p class="calcul__result" id="calculVariable2">
-            Ваша вторая переменная: <span id="secondVariable"></span>
+            Ваша вторая переменная: <span id="_secondVariable"></span>
           </p>
           <p class="calcul__result" id="calculResult">Результат:</p>
         </div>
