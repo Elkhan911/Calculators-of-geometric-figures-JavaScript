@@ -85,13 +85,13 @@
   border-radius: 10px;
 }
 
-.calculator__buttons-zone {
+.calculator__box {
   border: 1px solid green;
   width: 80%;
   margin: 0 auto;
 }
 
-.calculator__buttons {
+.calculator__content {
   border: 1px solid saddlebrown;
   margin: auto;
   text-align: center;

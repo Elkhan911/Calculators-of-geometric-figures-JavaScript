@@ -136,24 +136,20 @@ let buttonSub2 = document.querySelector("#_buttonSub2");
 //   console.log(span4.textContent);
 // });
 
-let btnPlus = document.querySelector("#_btnPlus");
-let btnMinus = document.querySelector("#_btnMinus");
-let btnMultiply = document.querySelector("#_btnMultiply");
-let btnDivide = document.querySelector("#_btnDivide");
+let plusBtn = document.querySelector("#_plusBtn");
+let minusBtn = document.querySelector("#_minusBtn");
+let multiplyBtn = document.querySelector("#_multiplyBtn");
+let divideBtn = document.querySelector("#_divideBtn");
 let deleteSymbolBtn = document.querySelector("#_deleteSymbol");
 let clearSymbolsBtn = document.querySelector("#_clearSymbols");
-
 let secondhint = document.querySelector("#_secondHint");
 let thirdHint = document.querySelector("#_thirdHint");
-
 let enterBtn = document.querySelector("#_enterBtn");
 let inputCalc = document.querySelector("#_inputCalc");
-let calculVariable1 = document.querySelector("#calculVariable1");
-let calculVariable2 = document.querySelector("#calculVariable2");
 let calcuResult = document.querySelector("#_calculResult");
 let newOperationBtn = document.querySelector("#_newOperationBtn");
-let firstvariable = document.querySelector("#_firstvariable");
-let secondVariable = document.querySelector("#_secondVariable");
+let variable1 = document.querySelector("#_variable1");
+let variable2 = document.querySelector("#_variable2");
 let buttons = document.querySelectorAll(".btns");
 
 // Main Calculator
@@ -181,15 +177,15 @@ deleteSymbolBtn.addEventListener("click", function () {
 
 // // ввод данных для первой перменной
 // enterBtn.addEventListener("click", function () {
-//   firstvariable.textContent = "";
-//   firstvariable.textContent = inputCalc.value;
+//   variable1.textContent = "";
+//   variable1.textContent = inputCalc.value;
 //   inputCalc.value = "";
 // });
 
 // // ввод данных для второй переменной
 // enterBtn2.addEventListener("click", function () {
-//   secondVariable.textContent = "";
-//   secondVariable.textContent = inputCalc.value;
+//   variable2.textContent = "";
+//   variable2.textContent = inputCalc.value;
 //   inputCalc.value = "";
 // });
 
@@ -197,12 +193,12 @@ let variableCounter = 1;
 
 enterBtn.addEventListener("click", function () {
   if (variableCounter == 1) {
-    firstvariable.textContent = inputCalc.value;
+    variable1.textContent = inputCalc.value;
     secondhint.classList.remove("calculator__hint_off");
     inputCalc.value = "";
     variableCounter = 2;
   } else {
-    secondVariable.textContent = inputCalc.value;
+    variable2.textContent = inputCalc.value;
     thirdHint.classList.remove("calculator__hint_off");
     inputCalc.value = "";
     variableCounter = 1;
@@ -227,8 +223,8 @@ function Divide(a, b) {
 
 // начать заново, сбросить все введенные данные
 newOperationBtn.addEventListener("click", function () {
-  firstvariable.textContent = "";
-  secondVariable.textContent = "";
+  variable1.textContent = "";
+  variable2.textContent = "";
   calcuResult.textContent = "";
   inputCalc.value = "";
   secondhint.classList.add("calculator__hint_off");
@@ -236,29 +232,29 @@ newOperationBtn.addEventListener("click", function () {
 });
 
 btnPlus.addEventListener("click", function () {
-  let a = firstvariable.textContent;
-  let b = secondVariable.textContent;
+  let a = variable1.textContent;
+  let b = variable2.textContent;
 
   calcuResult.textContent += " " + Plus(a, b);
 });
 
 btnMinus.addEventListener("click", function () {
-  let a = firstvariable.textContent;
-  let b = secondVariable.textContent;
+  let a = variable1.textContent;
+  let b = variable2.textContent;
 
   calcuResult.textContent += Minus(a, b);
 });
 
 btnMultiply.addEventListener("click", function () {
-  let a = firstvariable.textContent;
-  letb = secondVariable.textContent;
+  let a = variable1.textContent;
+  letb = variable2.textContent;
 
   calcuResult.textContent += Multiply(a, b);
 });
 
 btnDivide.addEventListener("click", function () {
-  let a = firstvariable.textContent;
-  let b = secondVariable.textContent;
+  let a = variable1.textContent;
+  let b = variable2.textContent;
 
   calcuResult.textContent += Divide(a, b);
 });
