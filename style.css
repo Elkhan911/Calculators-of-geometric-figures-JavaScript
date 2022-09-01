@@ -71,13 +71,14 @@
 .calculator__buttons-zone {
   border: 1px solid green;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .calculator__buttons {
   border: 1px solid saddlebrown;
   margin: auto;
   text-align: center;
+  padding: 5px;
 }
 
 .calculator__button {
