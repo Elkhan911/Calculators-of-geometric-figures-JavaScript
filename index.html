@@ -10,9 +10,9 @@
 
   <body class="page">
     <h1 class="page__header">Калькулторы геометрических фигур</h1>
-    <!-- First Calculator -->
+    <!-- First Calculator 
     <section class="calculator">
-      <h2 class="calculator__description">
+      <h2 class="calculator__header">
         Калькулятор для подсчета площади и периметр
         <u> квадрата</u>
       </h2>
@@ -38,11 +38,11 @@
           <span id="_span2" class="calculator__key"></span>
         </p>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Second Calculator -->
+    <!-- Second Calculator 
     <section class="calculator">
-      <h2 class="calculator__description">
+      <h2 class="calculator__header">
         Калькулятор, для подсчета площади и периметра
         <u> прямоугольника </u>
       </h2>
@@ -91,13 +91,13 @@
             <span id="_span24" class="calculator__key"></span>
           </p>
         </div>
-        <button class="calculator__button" id="_buttonSub1">Рассчитать</button>
+        <button class="calculator__btn" id="_buttonSub1">Рассчитать</button>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Third Calculator -->
+    <!-- Third Calculator 
     <section class="calculator">
-      <h2 class="calculator__description">
+      <h2 class="calculator__header">
         Калькулятор, для подсчета площади круга и длины
         <u> окружности</u>
       </h2>
@@ -126,11 +126,11 @@
           <span class="calculator__key" id="_span32"></span>
         </p>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Fourth Calculator -->
+    <!-- Fourth Calculator 
     <section class="calculator">
-      <h2 class="calculator__description">
+      <h2 class="calculator__header">
         Калькулятор, для подсчета площади
         <u> треугольника</u> по трем сторонам
       </h2>
@@ -181,38 +181,57 @@
             Площадь треугольника:
             <span id="span4" class="calculator__key"></span>
           </p>
-          <button class="calculator__button" id="buttonSub2">рассчитать</button>
+          <button class="calculator__btn" id="buttonSub2">рассчитать</button>
         </div>
       </div>
-    </section>
+    </section>  -->
 
     <!-- Main Calculator-->
     <section class="calculator">
-      <h2 class="calculator__description">
-        Сделайте обычный калькулятор при помощи экранной клавиатуры
-      </h2>
-      <div class="calculator__keys">
-        <div class="calcul">
-          <button class="calcul__btn-stl calcul__btns" id="button1">1</button>
-          <button class="calcul__btn-stl calcul__btns" id="button2">2</button>
-          <button class="calcul__btn-stl calcul__btns" id="button3">3</button>
+      <h2 class="calculator__header">Калькулятор с экранной клавиатурой</h2>
+
+      <div class="calculator__buttons-zone">
+        <div class="calculator__buttons">
+          <button class="calculator__button calcul__btns" id="button1">
+            1
+          </button>
+          <button class="calculator__button calcul__btns" id="button2">
+            2
+          </button>
+          <button class="calculator__button calcul__btns" id="button3">
+            3
+          </button>
           <div>
-            <button class="calcul__btn-stl calcul__btns" id="button4">4</button>
-            <button class="calcul__btn-stl calcul__btns" id="button5">5</button>
-            <button class="calcul__btn-stl calcul__btns" id="button6">6</button>
+            <button class="calculator__button calcul__btns" id="button4">
+              4
+            </button>
+            <button class="calculator__button calcul__btns" id="button5">
+              5
+            </button>
+            <button class="calculator__button calcul__btns" id="button6">
+              6
+            </button>
           </div>
-          <button class="calcul__btn-stl calcul__btns" id="button7">7</button>
-          <button class="calcul__btn-stl calcul__btns" id="button8">8</button>
-          <button class="calcul__btn-stl calcul__btns" id="button9">9</button>
-          <button class="calcul__btn-stl calcul__btns" id="button10">0</button>
+          <button class="calculator__button calcul__btns" id="button7">
+            7
+          </button>
+          <button class="calculator__button calcul__btns" id="button8">
+            8
+          </button>
+          <button class="calculator__button calcul__btns" id="button9">
+            9
+          </button>
+          <button class="calculator__button calcul__btns" id="button10">
+            0
+          </button>
         </div>
-        <div>
-          <button class="calcul__btn-stl" id="buttonPlus">+</button>
-          <button class="calcul__btn-stl" id="buttonMinus">-</button>
-          <button class="calcul__btn-stl" id="buttonMultiply">*</button>
-          <button class="calcul__btn-stl" id="buttonDivide">/</button>
+        <div class="calculator__buttons">
+          <button class="calculator__button" id="buttonPlus">+</button>
+          <button class="calculator__button" id="buttonMinus">-</button>
+          <button class="calculator__button" id="buttonMultiply">*</button>
+          <button class="calculator__button" id="buttonDivide">/</button>
         </div>
-        <div>
+        <div class="calculator__buttons">
           <button class="calcul__buttons-extra" id="deleteSymbol">
             Удалить символ
           </button>
@@ -220,7 +239,7 @@
             Очистить символы
           </button>
 
-          <div>
+          <div class="calculator__buttons">
             <button class="calcul__buttons-extra" id="enterBtn1">
               Enter для первой переменной
             </button>
@@ -229,7 +248,8 @@
             </button>
           </div>
         </div>
-        <div>
+
+        <div class="calculator__buttons">
           <input
             class="calcul__values"
             type="text"
@@ -240,7 +260,7 @@
             Начать заново
           </button>
         </div>
-        <div id="parentDiv">
+        <div id="parentDiv" class="calculator__buttons">
           <p class="calcul__result" id="calculVariable1">
             Ваша первая переменная: <span id="firstvariable"></span>
           </p>

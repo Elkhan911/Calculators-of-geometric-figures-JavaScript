@@ -2,44 +2,44 @@
 //******************************************** */ VARIABLES
 //************************************************************************************************************** */
 
-let input1 = document.querySelector("#_input1");
+const input1 = document.querySelector("#_input1");
 let span11 = document.querySelector("#_span1");
 let span12 = document.querySelector("#_span2");
-let inputLength = document.querySelector("#_inputLength");
-let inputWidth = document.querySelector("#_inputWidth");
+const inputLength = document.querySelector("#_inputLength");
+const inputWidth = document.querySelector("#_inputWidth");
 let span21 = document.querySelector("#_span21");
 let span22 = document.querySelector("#_span22");
 let span23 = document.querySelector("#_span23");
 let span24 = document.querySelector("#_span24");
-let buttonSub1 = document.querySelector("#_buttonSub1");
-let input3 = document.querySelector("#_input3");
+const buttonSub1 = document.querySelector("#_buttonSub1");
+const input3 = document.querySelector("#_input3");
 let span31 = document.querySelector("#_span31");
 let span32 = document.querySelector("#_span32");
-
-let input4A = document.querySelector("#_input4A");
-let input4B = document.querySelector("#_input4B");
-let input4C = document.querySelector("#_input4C");
+const input4A = document.querySelector("#_input4A");
+const input4B = document.querySelector("#_input4B");
+const input4C = document.querySelector("#_input4C");
 let span4A = document.querySelector("#_span4A");
 let span4B = document.querySelector("#_span4B");
 let span4C = document.querySelector("#_span4C");
 let span4 = document.querySelector("#span4");
-let buttonSub2 = document.querySelector("#buttonSub2");
-let buttonPlus = document.querySelector("#buttonPlus");
-let buttonMinus = document.querySelector("#buttonMinus");
-let buttonMultiply = document.querySelector("#buttonMultiply");
-let buttonDivide = document.querySelector("#buttonDivide");
-let deleteSymbolBtn = document.querySelector("#deleteSymbol");
-let clearSymbolsBtn = document.querySelector("#clearSymbols");
-let enterBtn1 = document.querySelector("#enterBtn1");
-let enterBtn2 = document.querySelector("#enterBtn2");
-let calculValue = document.querySelector("#calculValue");
-let calculVariable1 = document.querySelector("#calculVariable1");
-let calculVariable2 = document.querySelector("#calculVariable2");
+const buttonSub2 = document.querySelector("#buttonSub2");
+
+const buttonPlus = document.querySelector("#buttonPlus");
+const buttonMinus = document.querySelector("#buttonMinus");
+const buttonMultiply = document.querySelector("#buttonMultiply");
+const buttonDivide = document.querySelector("#buttonDivide");
+const deleteSymbolBtn = document.querySelector("#deleteSymbol");
+const clearSymbolsBtn = document.querySelector("#clearSymbols");
+const enterBtn1 = document.querySelector("#enterBtn1");
+const enterBtn2 = document.querySelector("#enterBtn2");
+const calculValue = document.querySelector("#calculValue");
+const calculVariable1 = document.querySelector("#calculVariable1");
+const calculVariable2 = document.querySelector("#calculVariable2");
 let calcuResult = document.querySelector("#calculResult");
-let NewOperationBtn = document.querySelector("#NewOperationBtn");
+const NewOperationBtn = document.querySelector("#NewOperationBtn");
 let firstvariable = document.querySelector("#firstvariable");
 let secondVariable = document.querySelector("#secondVariable");
-let buttons = document.querySelectorAll(".calcul__btns");
+const buttons = document.querySelectorAll(".calcul__btns");
 
 //************************************************************************************************************** */
 //******************************************** */ FUNCTIONS
@@ -103,7 +103,6 @@ input3.addEventListener("keydown", function (event) {
 });
 
 // Fourth Calculator
-
 input4A.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
     if (isItNaNorEmpty(input4A.value)) {
@@ -156,7 +155,7 @@ buttonSub2.addEventListener("click", function () {
 
 // Main Calculator
 // экранная клавиатура для кнопок
-for (let button of buttons) {
+for (const button of buttons) {
   button.addEventListener("click", function () {
     calculValue.value += button.textContent;
   });
