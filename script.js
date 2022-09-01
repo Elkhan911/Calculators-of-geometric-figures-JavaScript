@@ -160,35 +160,7 @@ for (let button of buttons) {
   });
 }
 
-// функция очистки поля ввода
-clearSymbolsBtn.addEventListener("click", function () {
-  inputCalc.value = "";
-});
-
-// функция удаления последнего символа
-deleteSymbolBtn.addEventListener("click", function () {
-  let arr = inputCalc.value.split("");
-  arr.pop();
-  let newValue = arr.join("");
-  inputCalc.value = newValue;
-});
-
-//*****************************************tut */
-
-// // ввод данных для первой перменной
-// enterBtn.addEventListener("click", function () {
-//   variable1.textContent = "";
-//   variable1.textContent = inputCalc.value;
-//   inputCalc.value = "";
-// });
-
-// // ввод данных для второй переменной
-// enterBtn2.addEventListener("click", function () {
-//   variable2.textContent = "";
-//   variable2.textContent = inputCalc.value;
-//   inputCalc.value = "";
-// });
-
+// счетчик для определения переменной - первая или вторая
 let variableCounter = 1;
 
 enterBtn.addEventListener("click", function () {
@@ -205,21 +177,42 @@ enterBtn.addEventListener("click", function () {
   }
 });
 
-function Plus(a, b) {
-  return Number(a) + Number(b);
-}
+plusBtn.addEventListener("click", function plus() {
+  calcuResult.textContent =
+    Number(variable1.textContent) + Number(variable2.textContent);
+  plusBtn.removeEventListener("click", plus);
+});
 
-function Minus(a, b) {
-  return Number(a) - Number(b);
-}
+minusBtn.addEventListener("click", function minus() {
+  calcuResult.textContent =
+    Number(variable1.textContent) - Number(variable2.textContent);
+  minusBtn.removeEventListener("click", minus);
+});
 
-function Multiply(a, b) {
-  return Number(a) * Number(b);
-}
+multiplyBtn.addEventListener("click", function multiply() {
+  calcuResult.textContent =
+    Number(variable1.textContent) * Number(variable2.textContent);
+  multiplyBtn.removeEventListener("click", multiply);
+});
 
-function Divide(a, b) {
-  return Number(a) / Number(b);
-}
+divideBtn.addEventListener("click", function divide() {
+  calcuResult.textContent =
+    Number(variable1.textContent) / Number(variable2.textContent);
+  divideBtn.removeEventListener("click", divide);
+});
+
+// функция удаления последнего символа
+deleteSymbolBtn.addEventListener("click", function () {
+  let arr = inputCalc.value.split("");
+  arr.pop();
+  let newValue = arr.join("");
+  inputCalc.value = newValue;
+});
+
+// функция очистки поля ввода
+clearSymbolsBtn.addEventListener("click", function () {
+  inputCalc.value = "";
+});
 
 // начать заново, сбросить все введенные данные
 newOperationBtn.addEventListener("click", function () {
@@ -229,32 +222,4 @@ newOperationBtn.addEventListener("click", function () {
   inputCalc.value = "";
   secondhint.classList.add("calculator__hint_off");
   thirdHint.classList.add("calculator__hint_off");
-});
-
-btnPlus.addEventListener("click", function () {
-  let a = variable1.textContent;
-  let b = variable2.textContent;
-
-  calcuResult.textContent += " " + Plus(a, b);
-});
-
-btnMinus.addEventListener("click", function () {
-  let a = variable1.textContent;
-  let b = variable2.textContent;
-
-  calcuResult.textContent += Minus(a, b);
-});
-
-btnMultiply.addEventListener("click", function () {
-  let a = variable1.textContent;
-  letb = variable2.textContent;
-
-  calcuResult.textContent += Multiply(a, b);
-});
-
-btnDivide.addEventListener("click", function () {
-  let a = variable1.textContent;
-  let b = variable2.textContent;
-
-  calcuResult.textContent += Divide(a, b);
 });
